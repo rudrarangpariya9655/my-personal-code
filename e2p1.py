@@ -3,7 +3,7 @@ from ast import Continue
 
 students=[]
 
-str="*****"
+str1="*****"
 
 
 while True:
@@ -63,10 +63,10 @@ while True:
         if students:
             count=1
             print(str*10)
-            print("Sr.no\tStudent name\tAttendance\tDate")
+            print("Sr.no".ljust(10),"Student name".ljust(20),"Attendance".ljust(10),"Date".ljust(10))
             print(str*10)
             for i in students:
-                print(count,"       ",i[0],"         ",i[1],"         ",i[2])
+                print(str(count).ljust(10),i[0].ljust(20),str(i[1]).ljust(10),(i[2]).ljust(10))
                 count+=1
             print(str*10)
         else:
