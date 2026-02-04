@@ -33,7 +33,7 @@ while True:
                 else:
                     print("ther is not any name with :",stu_name)
             if op==2:
-                stu_name=input("Enter which student subject name you want to update :")
+                stu_name=input("Enter which student mark you want to update :")
                 marks=input("Enter Marks to change :")
                 while mark>100 or mark<0:
                     mark=int(input("Enter  0<mark<100: "))
@@ -72,4 +72,5 @@ while True:
         else:
             print("List is empty")
     elif option==-1:
+
         break
