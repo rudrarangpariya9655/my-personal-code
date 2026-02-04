@@ -13,9 +13,9 @@ while True:
         li=[]
 
         name=input("Enter name : ")
-        attendance=input("Enter  attendance : ")
+        attendance=int(input("Enter  attendance : "))
         while attendance>100 or attendance<0:
-            attendance=input("Enter  0<attendance<100: ")
+            attendance=int(input("Enter  0<attendance<100: "))
         date=input("Enter date : ")
 
         li.append(name)
@@ -37,7 +37,7 @@ while True:
                         student[0]=input("enter name to update : ")
                         break
                     elif op==2:
-                        student[1]=input("enter attedance to update : ")
+                        student[1]=int(input("enter attedance to update : "))
                         break
             else:
                  print("there is not any name")
@@ -49,26 +49,26 @@ while True:
             
         if not students:
             print("List is empty")
-
-        name=input("which student you want to delete : ")
-        for student in students:
-            if student[0]==name:
-                students.remove(student) 
-                break
         else:
-             print("there is not any name with :",name)
+            name=input("which student you want to delete : ")
+            for student in students:
+                if student[0]==name:
+                    students.remove(student) 
+                    break
+            else:
+                print("there is not any name with :",name)
 
     elif option==4:
         
         if students:
             count=1
-            print(str*10)
+            print(str1*10)
             print("Sr.no".ljust(10),"Student name".ljust(20),"Attendance".ljust(10),"Date".ljust(10))
-            print(str*10)
+            print(str1*10)
             for i in students:
                 print(str(count).ljust(10),i[0].ljust(20),str(i[1]).ljust(10),(i[2]).ljust(10))
                 count+=1
-            print(str*10)
+            print(str1*10)
         else:
             print("List is empty")
 
